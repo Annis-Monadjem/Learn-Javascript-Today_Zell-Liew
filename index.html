@@ -1,24 +1,35 @@
 <!DOCTYPE html>
+<!--{{{-->
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>CSS Transitions</title>
 
-    <link
-      href="https://fonts.googleapis.com/css?family=Roboto:400,700"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet" />
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/styles.css" />
-  </head>
 
-  <body>
-    <main><button>Click Me!</button></main>
+<body>
+    <!-- }}} -->
+    <main>
+        <div class="left">
+            <div id="transition-1" class="transitionElems">Transition-1</div>
+            <div id="transition-2" class="transitionElems">Transition-2</div>
+            <div id="transition-3" class="transitionElems">Transition-3</div>
+        </div>
+        <div class="right">
+            <div id="animate-1" class="animationElems">Animate-1</div>
+            <div id="animate-2" class="animationElems">Animate-2</div>
+            <div id="animate-3" class="animationElems">Animate-3</div>
+        </div>
+    </main>
 
     <script src="js/main.js"></script>
-  </body>
+</body>
+
 </html>

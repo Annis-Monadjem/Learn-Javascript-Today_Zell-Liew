@@ -1,52 +1,130 @@
+/***************************************************************
+ *
+ *                        GENERAL
+ *
+ ***************************************************************/
+/*{{{*/
 body {
+  box-sizing: border-box;
   padding: 0;
   margin: 0;
+}
+
+main {
+  padding: 5rem 1rem;
   min-height: 100vh;
   display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
   align-items: center;
-  justify-content: center;
 }
 
-button {
-  position: absolute;
-  padding: 0.5rem 1rem;
-  font-size: inherit;
-  background-color: green;
-  color: white;
+.transitionElems,
+.animationElems {
+  margin: 0;
+  text-align: center;
+  color: #0b0e91;
+  background-color: #918e0b;
   font-weight: bold;
-  border: 1px darkkhaki solid;
-  border-radius: 5px;
-  opacity: 1;
+  padding: 1rem;
 }
 
-button:hover {
-  background-color: black;
-  color: green;
-  border: 2px white solid;
-  box-shadow: 0px 0px 0px 2px green;
-  animation: run 0.5s ease-out;
-  animation-iteration-count: 2;
-  animation-direction: normal;
-  animation-fill-mode: running;
+.transitionElems ~ .transitionElems,
+.animationElems ~ .animationElems {
+  margin-top: 2rem;
 }
 
-@keyframes run {
+.transitionElems:hover {
+  color: #918e0b;
+  background-color: #0b0e91;
+}
+
+.animationElems {
+  color: #ba3c3c;
+  background-color: #49dede;
+}
+
+.animationElems:hover {
+  color: #49dede;
+  background-color: #ba3c3c;
+}
+
+/*}}}*/
+
+/***************************************************************
+ *
+ *                        TRANSITIONEND
+ *
+ ***************************************************************/
+/*{{{*/
+#transition-1 {
+  transition-property: transform;
+  transition-duration: 2s;
+  transform: rotate(0deg);
+}
+
+#transition-1.is-highlighted {
+  transform: rotate(90deg);
+}
+
+#transition-2 {
+  transition: background-color 2s ease-out, color 5s ease-in;
+}
+
+#transition-2.is-highlighted {
+  color: #918e0b;
+  background-color: #0b0e91;
+}
+
+#transition-3 {
+  transition-property: transform;
+  transition-duration: 5s;
+  transition-timing-function: linear;
+  transform: translateY(0);
+}
+
+#transition-3.is-highlighted {
+  transform: translateY(5rem);
+}
+
+/*}}}*/
+
+/***************************************************************
+ *
+ *                        ANIMATIONEND
+ *
+ ***************************************************************
+/*{{{*/
+.animationElems {
+  animation-name: round;
+  animation-duration: 0.5s;
+  animation-play-state: paused;
+}
+
+.animationElems.is-clicked {
+  animation-play-state: running;
+}
+
+@keyframes round {
   0% {
-    transform: rotate(0);
+    transform: rotate(0deg);
   }
 
   25% {
-    transform: rotate(22deg);
+    transform: rotate(90deg);
   }
 
   50% {
-    transform: rotate(0deg);
+    transform: rotate(180deg);
   }
 
   75% {
-    transform: rotate(-22deg);
+    transform: rotate(270deg);
   }
+
   100% {
-    transform: rotate(0deg);
+    transform: rotate(360deg);
   }
 }
+
+/*}}}*/
