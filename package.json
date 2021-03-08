@@ -1,0 +1,11 @@
+{
+  "name": "learn-js-zell-liew",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Annis-Monadjem/Learn-Javascript-Today_Zell-Liew.git",
+  "author": "Annis-Monadjem <annismonadjem@yahoo.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "live-server"
+  }
+}
