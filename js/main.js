@@ -1,7 +1,17 @@
-// Your JavaScript goes here
-const button = document.querySelector("button");
-const body = document.body;
+const modalButton = document.querySelector('.jsModalButton')
+const modalCloseButton = document.querySelector('.jsModalClose')
+const modalOverlay = document.querySelector('.modal-overlay')
 
-button.addEventListener("click", _ => {
-  body.classList.toggle("offsite-is-open");
-});
+modalButton.addEventListener('click', event => {
+  document.body.classList.add('modal-is-open')
+})
+
+modalCloseButton.addEventListener('click', event => {
+  document.body.classList.remove('modal-is-open')
+})
+
+modalOverlay.addEventListener('click', event => {
+  if (!event.target.closest('.modal')) {
+    document.body.classList.remove('modal-is-open')
+  }
+})

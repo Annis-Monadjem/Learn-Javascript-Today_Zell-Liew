@@ -113,10 +113,3 @@ noscript {
   margin-bottom: 1em;
   margin-top: 1em;
 }
-
-/*******************
- Focus
- *******************/
-[tabindex="-1"] {
-  outline: none !important;
-}
