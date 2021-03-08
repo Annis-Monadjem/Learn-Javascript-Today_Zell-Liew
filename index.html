@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!--{{{-->
 <html lang="en">
 
 <head>
@@ -6,34 +7,38 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Off-canvas menu</title>
+  <title>CSS Transitions</title>
 
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet" />
   <link rel="stylesheet" href="css/normalize.css" />
   <link rel="stylesheet" href="css/reset.css" />
   <link rel="stylesheet" href="css/styles.css" />
-</head>
 
 <body>
-  <div class="offsite-container">
-    <nav class="nav">
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Work</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
-  </div>
+  <!-- }}} -->
+  <main>
+    <div class="left">
+      <div id="transition-1" class="transitionElems">Transition-1</div>
+      <div id="transition-2" class="transitionElems">Transition-2</div>
+      <div id="transition-3" class="transitionElems">Transition-3</div>
+    </div>
+    <div class="right">
+      <div id="animate-1" class="animationElems">Animate-1</div>
+      <div id="animate-2" class="animationElems">Animate-2</div>
+      <div id="animate-3" class="animationElems">Animate-3</div>
+    </div>
+    <div class="center">
+      <div id="gsap-1" class="gsapElems">GSAP-1</div>
+      <div id="gsap-2" class="gsapElems">GSAP-2</div>
+      <div id="gsap-3" class="gsapElems">GSAP-3</div>
+      <div id="gsap-4" class="gsapElems">GSAP-4</div>
+    </div>
+  </main>
 
-  <div class="site-container">
-    <h1>Click the button to open the sidebar!</h1>
-    <button>
-      <span>Menu</span>
-    </button>
-  </div>
-
+  <!--{{{-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 
 </html>
+<!--}}}-->
