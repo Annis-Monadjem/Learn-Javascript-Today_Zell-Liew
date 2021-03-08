@@ -41,3 +41,26 @@ document.addEventListener("animationend", e => {
   }
 });
 //}}}
+
+/***************************************************************
+ *
+ *                        GSAP
+ *
+ ***************************************************************/
+
+const gsap1 = document.querySelector("#gsap-1");
+const gsap2 = document.querySelector("#gsap-2");
+const gsap3 = document.querySelector("#gsap-3");
+const gsap4 = document.querySelector("#gsap-4");
+
+TweenMax.to(gsap1, 1, { x: 200, ease: Power4.easeOut });
+TweenMax.to(gsap2, 3, { y: 200, ease: Power0.Bounce });
+TweenMax.to(gsap3, 4, { rotate: 360, opacity: 0, ease: Power0.Bounce });
+
+const tl = new TimelineMax({});
+gsap4.addEventListener("click", e => {
+  tl.to(gsap4, 1, { x: 100, ease: Power0.easeOut });
+  tl.to(gsap4, 1, { y: 100, ease: Power0.easeOut });
+  tl.to(gsap4, 1, { x: 0, ease: Power0.easeOut });
+  tl.to(gsap4, 1, { y: 0, ease: Power0.easeOut });
+});

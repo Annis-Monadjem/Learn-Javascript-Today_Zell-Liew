@@ -4,23 +4,36 @@
  *
  ***************************************************************/
 /*{{{*/
-body {
+
+*,
+*:before,
+*:after {
   box-sizing: border-box;
+}
+
+body {
   padding: 0;
   margin: 0;
+  background-color: #ff6e16;
 }
 
 main {
   padding: 5rem 1rem;
   min-height: 100vh;
+  max-width: 550px;
+  margin: 0 auto;
+  border: 1px solid red;
+  background-color: black;
+
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
 }
 
 .transitionElems,
-.animationElems {
+.animationElems,
+.gsapElems {
   margin: 0;
   text-align: center;
   color: #0b0e91;
@@ -29,8 +42,9 @@ main {
   padding: 1rem;
 }
 
-.transitionElems ~ .transitionElems,
-.animationElems ~ .animationElems {
+.transitionElems,
+.animationElems,
+.gsapElems {
   margin-top: 2rem;
 }
 
@@ -47,6 +61,17 @@ main {
 .animationElems:hover {
   color: #49dede;
   background-color: #ba3c3c;
+}
+
+.gsapElems {
+  color: #07fd7a;
+  background-color: #4c0129;
+}
+
+.gsapElems:hover {
+  color: black;
+  background-color: #ff6e16;
+  outline: 1px solid black;
 }
 
 /*}}}*/
@@ -128,3 +153,9 @@ main {
 }
 
 /*}}}*/
+
+/***************************************************************
+ *
+ *                        GSAP
+ *
+ ***************************************************************/
